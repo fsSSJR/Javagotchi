@@ -35,9 +35,7 @@ public class Creature {
             happiness -= 5;
             fullness -= 5;
 
-            if (energy > 15) {
-                energy = 15;
-            }
+            if (energy > 15) { energy = 15; }
 
             print("*yawn*, that was a good nap!");
         }
