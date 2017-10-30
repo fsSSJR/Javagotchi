@@ -53,15 +53,21 @@ public class Creature {
 
     public String checkStatus() {
         String status = "";
-        if (happiness <=6 ) {
+
+        if (happiness <= 0 || energy <= 0 || fullness <= 0) {
+            print("Oh no! " + this.getName() + " has died. You're a terrible owner");
+            System.exit(0);
+        }
+
+        if (happiness <= 6) {
             status += "Oh, " + this.getName() + " is feeling sad!\n";
         }
 
-        if (energy <=6 ) {
+        if (energy <= 6) {
             status += "Hmm, " + this.getName() + " is really tired!\n";
         }
 
-        if (fullness <=6 ) {
+        if (fullness <= 6) {
             status += "Woops, " + this.getName() + " is super hungry!\n";
         }
 
